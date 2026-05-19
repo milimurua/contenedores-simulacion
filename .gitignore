@@ -1,0 +1,50 @@
+# Dependencias PHP
+/vendor/
+
+# Variables de entorno
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+storage/logs/
+
+# Cache / archivos temporales
+.cache/
+tmp/
+temp/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# IDEs / editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker
+docker-compose.override.yml
+
+# Composer
+composer.phar
+
+# PHPUnit / coverage
+.phpunit.result.cache
+coverage/
+
+# Node, si usás frontend
+/node_modules/
+/dist/
+/build/
+
+# Archivos de base de datos locales
+*.sqlite
+*.db
+
+# Uploads o archivos generados por la app
+/uploads/
+public/uploads/
