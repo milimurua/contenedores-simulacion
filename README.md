@@ -4,10 +4,11 @@
 ```
 docker-demo/
 ├── docker-compose.yml          ← Orquestación de los 3 servicios
-├── container1-db/
+├── db/
 │   └── init.sql                ← Script SQL inicial (tablas + datos)
-└── container2-web/
+└── web/
     ├── nginx.conf              ← Configuración del servidor web
+    ├── Dockerfile 
     └── src/
         └── index.php           ← Página PHP que consulta la BD
 ```
@@ -31,4 +32,4 @@ Abrí el navegador en: http://localhost:8080
 ## Arquitectura
 - **contenedor1-db** → MySQL 8.0 (red interna, no expuesto al exterior)
 - **contenedor2-web** → PHP 8.2-FPM (conecta a la BD por nombre de host)
-- **nginx-proxy**     → Nginx Alpine, puerto 8080:80 (accesible desde el anfitrión)
+- **nginx-proxy** → Nginx Alpine, puerto 8080:80 (accesible desde el anfitrión)
